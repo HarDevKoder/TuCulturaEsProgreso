@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: Azure
+}
+
+.contenedor {
+    width: 90%;
+    height: auto;
+    margin: 60px auto;
+}
+
+.titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.6em;
+    color: #054a8f;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 15px;
+}
+
+form {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 90%;
+    margin: 15px auto;
+    background: #d3dde4;
+    overflow: hidden;
+    border: 1px solid black;
+    border-top: 6px solid #054a8f;
+}
+
+.formulario .frmControl{
+    width: 95%;
+    display: block;
+    margin: auto auto;
+}
+
+input[type="text"],form input[type="password"]{
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    text-align: left;
+}
+
+form p{
+    margin:10px 0;
+    text-align: center;
+}
+
+.contenedorInputFileExt{
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto;
+    width: 50px;
+    height: auto;
+    /* border: 1px solid red; */
+}
+
+.contenedorInputFileInt{
+    padding: 5px;
+    width: 90%;
+    height: auto;
+    /* border: 1px dashed black; */
+    background-image: url('../imagenes/qr.png');
+    background-size:85%;
+    background-position: center;
+    background-repeat: no-repeat;
+   }
+
+input[type="file"]{
+    width:100%;
+    font-size: 20px;
+    opacity: 0;
+}
+
+.contenedor .formulario .btn {
+    width: 100%;
+    text-align: center;
+    background: #054a8f;
+    color: #fff;
+    border: 1px solid #054a8f;
+    display: block;
+    padding: 15px 10px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 18px;
+    margin-left: 0;
+    margin-top: 20px;
+}
+
+.linksInferiores{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #054a8f;
+}
+
+.linksInferiores a{
+    color: #c5840d;
+    text-decoration: underline;
+}
+
+

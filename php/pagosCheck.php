@@ -26,7 +26,7 @@
                 mensaje('El referente No existe!!','pagosCheck.php');
             }else{
                 //cuenta las ventas del referente
-                $ventas=cuentaVentas($referidopor); //function (extraer ventas acumuladas)
+                 $ventas=cuentaVentas($referidopor); //function (extraer ventas acumuladas)
 
                 //en caso de no tener ventas lo habilita para realizar la primero (evita 0 mod 5=0)
                 if($ventas == 0){
@@ -37,18 +37,14 @@
                 //verifico si el referente esta al dia con los pagos desde la base de datos
                 $estadoPago = extraerDato($conexion,'pago','usuarios','usuario',$referidopor); //function
 
-                // var_dump($ventas);
-                // echo "<br>";
-                // var_dump($estadoPago);
-
                 //si se alcanzo el tope de ventas se bloquea al usuario en la bd (colocar pago=1)
-                if($ventas%10 == 0 && $estadoPago == "0"){
+                if($ventas%5 == 0 && $estadoPago == "0"){
                     //solo se puede pagar referente y autor, no registro
                     //con variable superglobal para ocultar opciones de pago en el formulario pagosVista2
                     $_SESSION['habilitaPago']=1; 
 
                     //se pide confirmación para realizar pagos y permitir el registro de usuarios           
-                    mensajeConfirmacion('pagosOpciones.php','Has alcanzado el limite de 10 ventas\nDeseas Realizar el pago pendiente?','pagosCheck.php');
+                    mensaje('Se ha Alcanzado el Top de 5 ventas\nNo se puede Registrar mas!','pagosCheck.php');
                 }else{
                     //solo se puede pagar registro, no referente ni autor
                     //con variable superglobal para ocultar opciones de pago en el formulario pagosVista2

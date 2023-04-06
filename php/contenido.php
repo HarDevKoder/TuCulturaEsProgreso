@@ -13,15 +13,11 @@
 
         //CONTEO DE VENTAS TOTALES DE LA BASE DE DATOS
         $ventasTotales = contarRegistros($conexion, 'Registro');
-        echo $ventasTotales;
 
         //MAYOR VALOR REGISTRADO POR CADA USUARIO
         $maximoValorRegistrado = mayorValorRegistrado ( $conexion, $userEmail );
         //GUARDO EL VALOR DEL TOP DE VENTAS EN VARIABLE DE SESION PARA QUE ESTE DISPONIBLE EN CUALQUIER PAGINA
         $_SESSION['topVentas']=$maximoValorRegistrado;
-
-        // echo "<h1>$ventasTotales</h1>";
-        // echo "Top de ventas: $maximoValorRegistrado";
 
         require '../vistas/contenidoVista.php';
 

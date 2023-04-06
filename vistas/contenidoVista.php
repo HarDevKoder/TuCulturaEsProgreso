@@ -6,36 +6,48 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
     <title>Contenido</title>
-    <link rel="stylesheet" href="../css/estilosContenido.css?v=1">
+    <link rel="stylesheet" href="../css/estilosContenido.css?v=2">
     
 </head>
 <body>
 
     <div class="contenedor">
-        <a href="../php/cerrar.php" class="linkCerrarSesion">Cerrar Sesión</a>
+
+        <div class="contenedorLinks">
+
+            <div class="cerrarSesion">
+                <a href="../php/cerrar.php" class="linkCerrarSesion">Cerrar Sesión</a>
+            </div>
+                
+
+            <div class="descargaLibro">
+                <a href="../libro/Creatividad Motivacional_epub.epub" download="Creatividad Motivacional.epub"><img src="../imagenes/descargar-archivo.png" alt=""></a>
+            </div>
+
+        </div>
+
+
+
+     
 
         <h2 class="titulo">Zona de Usuarios</h2>
         <hr class="border">
 
         <div class="notificaciones">
-
-            <!-- <a href="../php/cerrar.php" class="linkCerrarSesion">Cerrar Sesión</a> -->
-
-            <!-- <a href="../libro/Creatividad Motivacional_epub.epub" download="Creatividad Motivacional.epub"><img src="../imagenes/descargar-archivo.png" alt=""></a> -->
-
             <span>Top de Ventas: <?php echo $maximoValorRegistrado ?></span>
             <span>Ventas Totales: <?php echo $ventasTotales ?></span>
-
         </div>       
 
         <div class="pagos">
+
             <p>
                 Es necesario tener una cuenta de PayU para realizar los pagos, en el siguiente link podrá ingresar al sitio para iniciar sesión o crear una cuenta.
             </p>
+
             <div class="imagen-pago">
                 <a href="../vistas/payuVista.php"><img src="../imagenes/PayU.png" alt="" width="230px"></a>
             </div>
-            
+
         </div>
 
         <div class="reportes">

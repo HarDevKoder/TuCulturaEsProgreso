@@ -36,7 +36,7 @@ function conectarBd($server,$user,$pass,$bd){
     if(!$conexion){
         echo 'Error en la conexión';
     } else{
-        echo 'Conexión exitosa';
+        // echo 'Conexión exitosa';
     }
 
     return $conexion;

@@ -26,10 +26,6 @@
 
         </div>
 
-
-
-     
-
         <h2 class="titulo">Zona de Usuarios</h2>
         <hr class="border">
 

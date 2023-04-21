@@ -4,11 +4,15 @@ session_start();
 //FUNCION PARA GENERAR MENSAJES DE ALERTA
 //---------------------------------------------------------------------------------------
 function mensaje($mensaje, $pagina){
-    // echo "<script>alert('$mensaje');</script>";
-    echo "<script>setTimeout(() => location.href = '$pagina', 1)</script>;";
-    echo "<script>alert('$mensaje');</script>";
+    echo "<script>
+              setTimeout(function() {
+                  alert('$mensaje');
+              }, 200); // esperar 1 segundo antes de mostrar el alert
+              setTimeout(function() {
+                  location.href = '$pagina';
+              }, 1000); // esperar 2 segundos antes de redirigir a la nueva página
+          </script>";
 }
-
 //---------------------------------------------------------------------------------------
 //FUNCION PARA MOSTRAR MENSAJE DE CONFIRMACIÓN (tested!!)
 //---------------------------------------------------------------------------------------
@@ -55,7 +59,7 @@ function contarRegistros( $conexion, $tabla ) {
 //---------------------------------------------------------------------------------------
 //FUNCION QUE DETERMINA LA MAYOR CANTIDAD DE VENTAS POR REFERENTE
 //---------------------------------------------------------------------------------------
-function mayorValorRegistrado ( $conexion, $userEmail ) {
+function mayorValorRegistrado ( $conexion) {
     $consulta = 'SELECT COUNT(*) AS contador FROM Registro GROUP BY referidopor ORDER BY contador DESC LIMIT 1';
     $resultado = $conexion->query( $consulta );
     if ( $resultado->num_rows > 0 ) {
@@ -67,14 +71,6 @@ function mayorValorRegistrado ( $conexion, $userEmail ) {
     $conexion->close();
     return $maximo;
   }
-
-
-
-
-
-
-
-
 
 //---------------------------------------------------------------------------------------
 //FUNCION PARA CONTAR LAS VENTAS DE UN USUARIO
@@ -179,7 +175,7 @@ function validaReferente($referidopor){
     include 'conexion.php';
 
     //contamos los registros que tengan el referido que se intenta registrar
-    $consultar = "SELECT COUNT(*) total FROM usuarios where usuario= '$referidopor'";
+    $consultar = "SELECT COUNT(*) total FROM Registro where usuario= '$referidopor'";
 
     //guardamos el resultado de la consulta en la variable conteo
     $resultado = mysqli_query($conexion, $consultar);

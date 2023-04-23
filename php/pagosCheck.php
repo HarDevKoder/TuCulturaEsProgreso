@@ -40,26 +40,25 @@
 
                 $topeVentas=mayorValorRegistrado ($conexion);
                 var_dump($topeVentas);
-
                 //si se alcanzo el tope de ventas se bloquea al usuario en la bd (colocar pago=1)
-                // if($TopeVentas%5 == 0 && $estadoPago == "0"){
-                //     //solo se puede pagar referente y autor, no registro
-                //     //con variable superglobal para ocultar opciones de pago en el formulario pagosVista2
-                //     // $_SESSION['habilitaPago']=1; 
+                if($topeVentas == 5){
+                    //solo se puede pagar referente y autor, no registro
+                    //con variable superglobal para ocultar opciones de pago en el formulario pagosVista2
+                    // $_SESSION['habilitaPago']=1; 
 
-                //     //se pide confirmación para realizar pagos y permitir el registro de usuarios           
-                //     mensaje('Se ha Alcanzado el Top de 5 ventas\nNo se puede Registrar mas!','pagosCheck.php');
-                // }else{
-                //     //solo se puede pagar registro, no referente ni autor
-                //     //con variable superglobal para ocultar opciones de pago en el formulario pagosVista2
-                //     $_SESSION['habilitaPago']=0;  
+                    //se pide confirmación para realizar pagos y permitir el registro de usuarios           
+                    mensaje('Se ha Alcanzado el Top de 5 ventas\nNo se puede Registrar mas!','pagosCheck.php');
+                }else{
+                    //solo se puede pagar registro, no referente ni autor
+                    //con variable superglobal para ocultar opciones de pago en el formulario pagosVista2
+                    // $_SESSION['habilitaPago']=0;  
 
-                //     //habilita al referente para volver a registrar desps de haber pagado (caso especial)
-                //     modificarDatos($conexion,'usuarios','pago','0','usuario',$referidopor);
+                    //habilita al referente para volver a registrar desps de haber pagado (caso especial)
+                    // modificarDatos($conexion,'usuarios','pago','0','usuario',$referidopor);
 
-                //     //si no ha alcanzado el tope de ventas proseguir a pagar
-                //     header("location:pagosOpciones.php");
-                // }  
+                    //si no ha alcanzado el tope de ventas proseguir a pagar
+                    header("location:pagosOpciones.php");
+                }  
             }
         }    
 // include '../vistas/pagosVista1.php';

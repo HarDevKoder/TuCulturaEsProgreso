@@ -101,6 +101,9 @@
                     <td><?php echo $mostrar[ 'usuario' ] ?></td>
                     <td><?php echo $mostrar[ 'fecha' ] ?></td>
                 </tr>
+                <tr>
+                    <td colspan="4"><hr></td>
+                </tr>
                 <?php
                 }
                 ?>

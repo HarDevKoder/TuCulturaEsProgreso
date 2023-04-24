@@ -76,6 +76,13 @@ select {
 	pointer-events: none;
 }
 
+option {
+    background-color: #f5f5f5 !important;
+    color: #333;
+    padding: 10px;
+    font-size: 16px ;
+  }
+
 .botonContainer{
     background: yellowgreen;
     width: fit-content;
@@ -94,6 +101,7 @@ select {
 table {
     margin: 10px auto;
     width: 100%;
+    height: fit-content;
     border-collapse: collapse;
     border: 2px solid black;
     font-weight: 500;
@@ -116,20 +124,8 @@ table th {
     background: MediumAquaMarine;
 }
 
-table td:first-child {
-    width: 40%;
-}
-
-table td:nth-child(2) {
-    width: 20%;
-}
-
-table td:nth-child(3) {
-    width: 20%;
-}
-
-table td:last-child {
-    width: 20%;
+table td:not(:first-child) {
+    width: 23.33%;
 }
 
 table tr:nth-child(n) {

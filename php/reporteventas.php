@@ -103,11 +103,14 @@
                     $valor = $_POST[ 'usuario' ];
                     $sql = "SELECT * FROM Registro where referidopor = '$valor' ";
                     $resultado = mysqli_query( $conexion, $sql );
+                    $total_ventas = 0;
+                    while( $mostrar = mysqli_fetch_array( $resultado ) ) {
                     // Consulta para obtener la cantidad de ventas que lleva cada registrado
-                    $sql_count = "SELECT COUNT(*) as total_referidos FROM Registro WHERE referidopor = '$valor'";
+                    $sql_count = "SELECT COUNT(*) as total_referidos FROM Registro WHERE referidopor = '".$mostrar['usuario']."'";
                     $resultado_count = mysqli_query($conexion, $sql_count);
                     $count = mysqli_fetch_array($resultado_count);
-                    while( $mostrar = mysqli_fetch_array( $resultado ) ) {
+                    // Acumulo la ventas de cada registrado para mostrar el total al final
+                    $total_ventas += $count['total_referidos'];
                 ?>
                 <tr>
                     <td><?php echo $mostrar[ 'nombre' ] ?></td>
@@ -122,6 +125,13 @@
                 <?php
                 }
                 ?>
+               <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th>Total:</th>
+                    <th><?php echo $total_ventas ?></th>
+               </tr>
             </table>
         </div>
     </body>

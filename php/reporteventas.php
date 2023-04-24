@@ -31,9 +31,14 @@
                     <select name="usuario" id="usuarios" class="usuarios" required>
                         <option value="" >Seleccione un usuario</option>
                         <?php
+                            // Inicializar el contador
+                            $contador = 1;
                             // Loop para crear las opciones del cuadro de lista
                             while ($row = $result->fetch_assoc()) {
-                                echo '<option value="' . $row["usuario"] . '">' . $row["usuario"] . '</option>';
+                                // echo '<option value="' . $row["usuario"]. $row["usuario"] . '">' . $row["usuario"] . '</option>';
+                                echo '<option value="' . $row["usuario"] . '">' . $contador . '. ' . $row["usuario"] . '</option>';
+                                // Incrementar el contador
+                                $contador++;
                             }
                         ?>
                     </select>

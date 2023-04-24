@@ -1,10 +1,21 @@
+<?php
+    // Se incluye liberia de Funciones PHP
+    include 'funciones.php';
+    // Se realiza Conexión a Base de Datos
+    $conexion = conectarBd( '190.8.176.115', 'tucultur_Administrador', 'Hdv080272*', 'tucultur_Asociados' );
+    // Consulta para traer los Usuarios Registrados
+    $sql = "SELECT usuario FROM Registro";
+    // Se guarda el resultado en variable
+    $result = $conexion->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang = 'es'>
     <head>
         <meta charset = 'UTF-8'>
         <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0, user-scalable=no,minimum-scale=1.0,maximum-scale=1.0'>
         <title>Tabla de datos</title>
-        <link rel = 'stylesheet' href = '../css/estilosReporteVentas.css?v=1'>
+        <link rel = 'stylesheet' href = '../css/estilosReporteVentas.css'>
     </head>
     <body>
         <!-- Contenedor General -->
@@ -15,14 +26,26 @@
             </div>
             <!-- Formulario Para Buscar Ventas de Referente -->
             <form method = 'POST'>
-                <!-- Ingreso de Referente a cosultar -->
-                <input type = 'text' name = 'valor' class = 'usuario-caja' placeholder = 'Usuario a Consultar'>
+                <!-- Lista Desplegable con los Usuarios Registrados -->
+                <div class="selectContainer">
+                    <select name="usuario" id="usuarios" class="usuarios" required>
+                        <option value="" >Seleccione un usuario</option>
+                        <?php
+                            // Loop para crear las opciones del cuadro de lista
+                            while ($row = $result->fetch_assoc()) {
+                                echo '<option value="' . $row["usuario"] . '">' . $row["usuario"] . '</option>';
+                            }
+                        ?>
+                    </select>
+                </div>
                 <!-- Boton de Envio de Consulta -->
-                <button type = 'submit' class = 'boton' name = 'buscar'>Consultar</button>
+                <div class="botonContainer">
+                    <button type = 'submit' class = 'boton' name = 'buscar'>buscar</button>
+                </div>
             </form>
             <!-- Tabla que muestra los Datos Basicos del Referente Consultado -->
             <table class = 'padre'>
-                <caption>DATOS DEL USUARIO</caption>
+                <caption>DATOS  USUARIO</caption>
                 <!-- Encabezados de La tabla de Datos de Usuario -->
                 <tr>
                     <th>Nombre</th>
@@ -32,12 +55,9 @@
                 </tr>
                 <!-- Controlador PHP -->
                 <?php
-                    // Se incluye liberia de Funciones PHP
-                    include 'funciones.php';
-                    // Se realiza Conexión a Base de Datos
-                    $conexion = conectarBd( '190.8.176.115', 'tucultur_Administrador', 'Hdv080272*', 'tucultur_Asociados' );
-                    // Se captura el Referente ingresado el el formuario
-                    $valor = $_POST[ 'valor' ];
+                    // Se captura el Referente ingresado en el formuario
+                    $valor = $_POST[ 'usuario' ];
+                    // var_dump($valor);
                     // Se Consultan los Datos del usuario en la base de datos
                     $sql = "SELECT * FROM Registro where usuario = '$valor' ";
                     // Resultado de la consulta guardado en variable
@@ -65,7 +85,7 @@
                     <th>Fecha y Hora</th>
                 </tr>
                 <?php
-                    $valor = $_POST[ 'valor' ];
+                    $valor = $_POST[ 'usuario' ];
                     $sql = "SELECT * FROM Registro where referidopor = '$valor' ";
                     $resultado = mysqli_query( $conexion, $sql );
                     while( $mostrar = mysqli_fetch_array( $resultado ) ) {

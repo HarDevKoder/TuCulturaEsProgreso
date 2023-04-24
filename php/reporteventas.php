@@ -23,7 +23,7 @@
             <!-- link para cerrar sesion de usuario -->
             <div class = 'cerrarSesion'>
                 <a href = 'cerrar.php'>Cerrar Sesión</a>
-            </div>
+            </div>                
             <!-- Formulario Para Buscar Ventas de Referente -->
             <form method = 'POST'>
                 <!-- Lista Desplegable con los Usuarios Registrados -->
@@ -57,6 +57,7 @@
                     <th>Cedula</th>
                     <th>Usuario</th>
                     <th>Afiliado Por</th>
+                    <th>Ventas</th>
                 </tr>
                 <!-- Controlador PHP -->
                 <?php
@@ -67,6 +68,10 @@
                     $sql = "SELECT * FROM Registro where usuario = '$valor' ";
                     // Resultado de la consulta guardado en variable
                     $resultado = mysqli_query( $conexion, $sql );
+                    // Consulta para obtener la cantidad de ventas que lleva cada registrado
+                    $sql_count = "SELECT COUNT(*) as total_referidos FROM Registro WHERE referidopor = '$valor'";
+                    $resultado_count = mysqli_query($conexion, $sql_count);
+                    $count = mysqli_fetch_array($resultado_count);
                     // Mientras haya datos que mostrar, genera Columna de datos (Registro) 
                     while( $mostrar = mysqli_fetch_array( $resultado ) ) {
                 ?>
@@ -75,6 +80,10 @@
                     <td><?php echo $mostrar[ 'cedula' ] ?></td>
                     <td><?php echo $mostrar[ 'usuario' ] ?></td>
                     <td><?php echo $mostrar[ 'referidopor' ] ?></td>
+                    <td><?php echo $count['total_referidos'] ?></td>
+                </tr>
+                <tr>
+                    <td colspan="5"><hr></td>
                 </tr>
                 <?php
                 }
@@ -88,11 +97,16 @@
                     <th>Cedula</th>
                     <th>Usuario</th>
                     <th>Fecha y Hora</th>
+                    <th>Ventas</th>
                 </tr>
                 <?php
                     $valor = $_POST[ 'usuario' ];
                     $sql = "SELECT * FROM Registro where referidopor = '$valor' ";
                     $resultado = mysqli_query( $conexion, $sql );
+                    // Consulta para obtener la cantidad de ventas que lleva cada registrado
+                    $sql_count = "SELECT COUNT(*) as total_referidos FROM Registro WHERE referidopor = '$valor'";
+                    $resultado_count = mysqli_query($conexion, $sql_count);
+                    $count = mysqli_fetch_array($resultado_count);
                     while( $mostrar = mysqli_fetch_array( $resultado ) ) {
                 ?>
                 <tr>
@@ -100,9 +114,10 @@
                     <td><?php echo $mostrar[ 'cedula' ] ?></td>
                     <td><?php echo $mostrar[ 'usuario' ] ?></td>
                     <td><?php echo $mostrar[ 'fecha' ] ?></td>
+                    <td><?php echo $count['total_referidos'] ?></td>
                 </tr>
                 <tr>
-                    <td colspan="4"><hr></td>
+                    <td colspan="5"><hr></td>
                 </tr>
                 <?php
                 }

@@ -1,38 +1,42 @@
-/* --------------------------------------------- */
-/* Configuración para Dispositivos Móviles       */
-/* --------------------------------------------- */
+/* Estilos De Pagina Principal (Mobile-First)  */
+/* ------------------------------------------- */
+/* Fuente personalizada */
 @font-face {
   font-family: miFuente;
   src: url(../fonts/Helvetica.ttf);
 }
 
+/* Reset General */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* Configuracion Base Pagina */
 html {
-  font-size: 10px;
+  font-size: 10px;  
   scroll-behavior: smooth;
   scroll-padding-top: 190px;
 }
 
+/* Configuracion Base del Contenido */
 body {
   font-family: miFuente;
   background: Azure;
 }
 
-/* Configuración Grid Bloques Generales */
+/* Estructura Grid General de la Pagina (1 Columna=Mobile) */
 .grid-container {
   width: 100%;
   display: grid;
   grid-template:
     "header" auto
-    "main" auto
+    "main"   auto
     "footer" auto;
 }
 
+/* Configuracion del area de la Cabecera */
 .header {
   grid-area: header;
   background-image: url(../imagenes/cabecera.jpg);
@@ -45,22 +49,26 @@ body {
   box-shadow: 1rem 0.5rem 0.5rem black;
 }
 
+/* Configuracion del area del Contenido */
 .main {
   grid-area: main;
   background: Azure;
 }
 
+/* Configuracion del area del Pie de Pagina */
 .footer {
   grid-area: footer;
 }
 
-/* Configuracón de la cabecera */
+/* Elementos de la cabecera */
+/* Logotipo Principal */
 .logo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Menu de naveacion */
 header nav {
   width: 100%;
   height: 100%;
@@ -142,6 +150,8 @@ header nav ul li a span {
     "tienda" auto;
 }
 
+/* Elementos de la Seccion del Contenido (Main) */
+/* Contenedor Main */
 .container-contenido > * {
   text-align: left;
   padding: 2rem;

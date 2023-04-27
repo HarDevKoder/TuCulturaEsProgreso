@@ -139,18 +139,6 @@ header nav ul li a span {
   font-size: 2.5rem;
 }
 
-/* Configuración Grid de las secciones del Main (contenidos) */
-/* .container-contenido {
-  display: grid;
-  grid-template:
-    "inicio" auto
-    "mision" auto
-    "vision" auto
-    "terminos" auto
-    "producto" auto
-    "tienda" auto;
-} */
-
 .container-contenido{
   display: flex;
   flex-direction: column;
@@ -231,7 +219,7 @@ header nav ul li a span {
 }
 
 .responsabilidadesLista {
-  margin-left: 2rem;
+  margin-left: 2.5rem;
   margin-bottom: 1.5rem;
   text-align: left;
   font-size: 1.8rem;
@@ -239,76 +227,14 @@ header nav ul li a span {
   line-height: 2.5rem;
 }
 
-/* Sección  Productos  */
-.producto {
-  grid-area: producto;
-  background-image: url(/imagenes/fondo-producto.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  font-size: 2rem;
-  font-weight: 600;
-  text-align: left;
-}
-
-.producto .directa {
-  height: auto;
-  margin-bottom: 0.2rem;
-  text-align: center;
-}
-
-.producto .directa img {
-  display: block;
-  width: 60%;
-  margin: auto;
-}
-
-.producto .proyecto {
-  padding: 1rem;
-  height: auto;
-  margin-bottom: 8rem;
-  text-align: center;
-}
-
-.proyecto-link {
-  color: aliceblue;
-  border: 2px solid black;
-  font-size: 1.8;
-  border-radius: 19px;
-  background: rgba(0, 0, 0, 0.3);
-  text-decoration: none;
-  display: block;
-  margin: 2rem auto;
+/* Listas con viñetas de Terminos */
+.textoContenido ul{
   width: fit-content;
-  padding: 1rem;
+  margin-left: 20px;
 }
 
-/* Sección de tienda */
-.tienda {
-  grid-area: tienda;
-  background: GhostWhite;
-  height: auto;
-  padding: 0.3rem;
-}
-
-.galeria {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 3px;
-}
-
-.columna {
-  flex: 100%;
-  max-width: 100%;
-}
-
-.columna img {
-  margin-top: 8px;
-  width: 100%;
-}
 
 /* Sección  Pie de Página  */
-
 .footer {
   grid-area: footer;
   background: black;

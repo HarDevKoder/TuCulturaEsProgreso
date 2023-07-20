@@ -3,12 +3,12 @@
 @media (min-width: 900px) {
   /* Configuracion Base Pagina */
   html {
-    scroll-padding-top: 251px;
+    scroll-padding-top: 165px;
   }
 
-  /* Estructura Grid General de la Pagina (1 Columna=Mobile) */
+  /* Estructura Grid General de la Pagina */
   .grid-container {
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
   }
 
@@ -16,7 +16,7 @@
   .header {
     width: 100%;
     left: 0;
-    height: 250px;
+    height: 180px;
     display: flex;
     justify-content: space-between;
   }
@@ -42,7 +42,7 @@
     overflow: hidden;
     width: fit-content;
     height: fit-content;
-    margin-right: 8px;
+    margin-right: 40px;
     margin-top: 10px;
   }
 
@@ -91,30 +91,34 @@
   .container-contenido > * {
     text-align: left;
     padding: 2rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 500;
-    line-height: 2.8rem;
+    line-height: 2.6rem;
     letter-spacing: 0.03em;
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
   }
 
   .container-contenido img {
     display: block;
-    margin: auto;
-    margin-bottom: 2rem;
-    width: 70%;
+    margin-right: 50px;
+    width: 28%;
+    float: left;
   }
 
   .container-contenido h2 {
     text-align: center;
     font-weight: bold;
     margin-bottom: 1rem;
+    padding: 20px;
   }
 
   /* Sección Inicio  */
   .inicio {
     grid-area: inicio;
-    background: Azure;
-    padding-top: 20rem;
+    background: rgb(196, 230, 230);
+    padding-top: 24rem;
   }
 
   /* Sección Misión  */
@@ -125,6 +129,9 @@
 
   .mision img {
     width: 100%;
+    margin-right: 50px;
+    width: 55%;
+    float: left;
   }
 
   /* Sección Visión  */
@@ -134,7 +141,9 @@
   }
 
   .vision img {
-    width: 100%;
+    margin-right: 50px;
+    width: 40%;
+    float: left;
   }
 
   /* Sección  Términos y Condiciones  */
@@ -156,7 +165,9 @@
   }
 
   .terminos img {
-    width: 100%;
+    margin-right: 50px;
+    width: 35%;
+    float: left;
   }
 
   .responsabilidadesLista {
@@ -178,6 +189,8 @@
   .footer {
     grid-area: footer;
     background: black;
+    width: 100%;
+    box-shadow: 1rem 0.5rem 0.5rem black;
   }
 
   .contenido-pie {
@@ -189,13 +202,16 @@
   }
 
   .contenido-pie .facebook {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid rgb(185, 209, 241);
+    margin-bottom: 15px;
   }
 
   .contenido-pie .facebook img {
-    width: 80%;
+    width:fit-content;
   }
 
   .contenido-pie p {

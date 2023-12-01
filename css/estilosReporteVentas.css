@@ -1,139 +1,146 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: Azure;
+  background: Azure;
 }
 
 .contenedor {
-    width: 95%;
-    height: auto;
-    margin: 20px auto;
-    overflow-x: auto;
+  width: 95%;
+  height: auto;
+  margin: 20px auto;
+  overflow-x: auto;
 }
 
 .cerrarSesion a {
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: bold;
-    color: black;
-    background: #638cb5;
-    border: 0px;
-    padding: 8px 10px;
-    width: 120px;
-    height: 30px;
-    line-height: 15px;
-    border-radius: 20px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+  background: #638cb5;
+  border: 0px;
+  padding: 8px 10px;
+  width: 120px;
+  height: 30px;
+  line-height: 15px;
+  border-radius: 20px;
 }
 
 form {
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 10px;
-    padding: 5px;
-    display:flex;
-    align-items: center;
-    justify-content:space-evenly;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.selectContainer{
-    width: fit-content;
-    border:1px solid #d9d9d9;
-    height:30px;
-    overflow: hidden;
-    position:relative;
+.selectContainer {
+  width: fit-content;
+  border: 1px solid #d9d9d9;
+  height: 30px;
+  overflow: hidden;
+  position: relative;
 }
 
 select {
-   background: transparent;
-   border: none;
-   font-size: 16px;
-   height: 30px;
-   padding: 5px;
-   width: 250px;
- }
-
- select:focus{ 
-    outline: none;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  height: 30px;
+  padding: 5px;
+  width: 250px;
 }
 
-.selectContainer::after{
-	content:"\025be";
-	display:table-cell;
-	padding-top:7px;
-	text-align:center;
-	width:30px;
-	height:30px;
-	background-color:#d9d9d9;
-	position:absolute;
-	top:0;
-	right:0px;	
-	pointer-events: none;
+select:focus {
+  outline: none;
+}
+
+.selectContainer::after {
+  content: "\025be";
+  display: table-cell;
+  padding-top: 7px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  background-color: #d9d9d9;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  pointer-events: none;
 }
 
 option {
-    background-color: #f5f5f5;
-    color: #333;
-    padding: 10px;
-    font-size: 16px ;
-  }
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 10px;
+  font-size: 16px;
+}
 
-.botonContainer{
-    background: yellowgreen;
-    width: fit-content;
+.botonContainer {
+  background: yellowgreen;
+  width: fit-content;
 }
 
 .boton {
-    font-size: 15px;
-    font-weight: bold;
-    color: black;
-    background: #638cb5;
-    border: 0px;
-    padding: 5px 15px;
-    border-radius: 5px;
-    cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+  background: #638cb5;
+  border: 0px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 table {
-    margin: 10px auto;
-    width: 100%;
-    height: fit-content;
-    border-collapse: collapse;
-    border: none;
-    font-weight: 500;
-    font-size: 15px;
+  margin: 10px auto;
+  width: 100%;
+  height: fit-content;
+  border-collapse: collapse;
+  border: none;
+  font-weight: 500;
+  font-size: 15px;
 }
 
 table td {
-    vertical-align: center;
-    text-align: left;
-    padding: 5px;
-    border-collapse: collapse;
-    word-break: break-all; /* Divide las palabras dentro de las celdas */
-    max-width: 200px; /* Establece un ancho máximo para las celdas */
-    text-align: center;
+  vertical-align: center;
+  text-align: left;
+  padding: 5px;
+  border-collapse: collapse;
+  word-break: break-all; /* Divide las palabras dentro de las celdas */
+  max-width: 200px; /* Establece un ancho máximo para las celdas */
+  text-align: center;
 }
 
 table th {
-    text-align: left;
-    padding: 5px;
-    border-bottom: 1px solid #d9d9d9;
-    background: MediumAquaMarine;
-    text-align: center;
+  text-align: left;
+  padding: 5px;
+  border-bottom: 1px solid #d9d9d9;
+  background: MediumAquaMarine;
+  text-align: center;
 }
 
 table tr:nth-child(n) {
-    background-color: azure;
-    color: black;
+  background-color: azure;
+  color: black;
 }
 
 caption {
-    padding: 1em;
-    color: MediumAquaMarine;
-    background: #000;
+  padding: 1em;
+  color: MediumAquaMarine;
+  background: #000;
+}
+
+@media (min-with: 900px) {
+  .contenedor {
+    width: 60%;
+    margin: 20px auto;
+  }
 }

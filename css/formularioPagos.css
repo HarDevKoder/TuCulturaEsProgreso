@@ -1,120 +1,173 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: Azure;
+  background: Azure;
 }
 
 .contenedor {
-    width: 90%;
-    height: auto;
-    margin: 20% auto;
+  width: 90%;
+  height: auto;
+  margin: 20% auto;
 }
 
 .titulo {
-    font-family: 'Raleway', sans-serif;
-    font-weight: bold;
-    font-size: 1.6em;
-    color: #054a8f;
-    text-align: center;
-    margin-top: 3px;
-    margin-bottom: 15px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 1.6em;
+  color: #054a8f;
+  text-align: center;
+  margin-top: 3px;
+  margin-bottom: 15px;
 }
 
 form {
-    font-family: 'Raleway', sans-serif;
-    width: 90%;
-    margin: 15px auto;
-    background: #d3dde4;
-    overflow: hidden;
-    border: 1px solid rgba(0,0,0,0.3);
-    border-top: 8px solid rgba(5,74,143,0.9);
+  font-family: "Raleway", sans-serif;
+  width: 90%;
+  margin: 15px auto;
+  background: #d3dde4;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-top: 8px solid rgba(5, 74, 143, 0.9);
 }
 
-.formulario .frmControl{
-    width: 95%;
-    display: block;
-    margin: auto auto;
+.formulario .frmControl {
+  width: 95%;
+  display: block;
+  margin: auto auto;
 }
 
-form input[type="text"],form input[type="password"]{
-    width: 100%;
-    padding: 6px;
-    margin-bottom: 10px;
-    font-size: 1.1em;
-    text-align: left;
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  text-align: left;
 }
 
 form input[type="radio"] {
-    padding: 9px;
-    margin-right: 5px;
-    margin-left: 60px;
-    margin-bottom: 12px;
-    font-size: 1em;
-    text-align: center;
+  padding: 9px;
+  margin-right: 5px;
+  margin-left: 60px;
+  margin-bottom: 12px;
+  font-size: 1em;
+  text-align: center;
 }
 
 .contenedor .formulario .btn {
-    width: 100%;
-    text-align: center;
-    background: #054a8f;
-    color: #fff;
-    border: 1px solid #054a8f;
-    display: block;
-    padding: 15px 10px;
-    cursor: pointer;
-    font-family: sans-serif;
-    font-size: 18px;
-    margin-left: 0;
+  width: 100%;
+  text-align: center;
+  background: #054a8f;
+  color: #fff;
+  border: 1px solid #054a8f;
+  display: block;
+  padding: 15px 10px;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 18px;
+  margin-left: 0;
 }
 
-.btnQr{
-    width: 70%;
-    height: 70%;
-    background-image: url('../imagenes/qr.png');
-    background-size: cover;
-    background-color: transparent;
-    padding: 5px;
-    cursor: pointer;
-    display: block;
-    margin:8px auto;
-    border: none;
-    cursor: pointer;
+.btnQr {
+  width: 70%;
+  height: 70%;
+  background-image: url("../imagenes/qr.png");
+  background-size: cover;
+  background-color: transparent;
+  padding: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 8px auto;
+  border: none;
+  cursor: pointer;
 }
 
-.contenedorPagos{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.contenedorPagos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.pagoQr{               
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    width: 60px;
-    height: 60px;
-    margin: 20px;
+.pagoQr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  width: 60px;
+  height: 60px;
+  margin: 20px;
 }
 
-.overlay{
-    width: 100vw;
-    height: 100vh;
-    background:rgba(0,0,0,.9);
-    position: fixed;
-    top: 0;
-    left: 0;
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-.ocultar{
-    display: none;
+.ocultar {
+  display: none;
 }
 
-.contenedor .mostrar{
+.contenedor .mostrar {
+  width: 80%;
+  position: relative;
+  top: 70px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor .mostrar img {
+  width: 100%;
+}
+
+.close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 20px;
+  right: 19px;
+  border-radius: 50%;
+  background: rgba(192, 192, 192, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.close span {
+  color: rgba(192, 192, 192, 0.7);
+  font-size: 20px;
+}
+
+.linksInferiores {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #054a8f;
+}
+
+.linksInferiores a {
+  color: #c5840d;
+  text-decoration: underline;
+}
+
+@media (min-width: 900px) {
+  .contenedor {
+    width: 40%;
+    margin: 40px auto;
+  }
+
+  .contenedor .mostrar {
     width: 80%;
     position: relative;
     top: 70px;
@@ -122,43 +175,9 @@ form input[type="radio"] {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .contenedor .mostrar img {
+    width: 30%;
+  }
 }
-
-.contenedor .mostrar img{
-    width: 100%;
-}
-
-.close{
-    width:40px;
-    height: 40px;
-    position: absolute;
-    top: 20px;
-    right: 19px;
-    border-radius: 50%;
-    background: rgba(192,192,192,.5);
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    z-index: 100;
-}
-
-.close span{
-    color: rgba(192,192,192,0.7);
-    font-size: 20px;
-    
-}
-
-.linksInferiores{
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.1em;
-    color: #054a8f;
-}
-
-.linksInferiores a{
-    color: #c5840d;
-    text-decoration: underline;
-}
-
-

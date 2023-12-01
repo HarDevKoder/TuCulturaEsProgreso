@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">   
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="../css/estilosLogin.css?v=1">
+    <link rel="stylesheet" href="../css/estilosLogin.css?v=15">
  
 </head>
 <body>

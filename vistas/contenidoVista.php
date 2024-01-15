@@ -6,7 +6,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
     <title>Contenido</title>
-    <link rel="stylesheet" href="../css/estilosContenido.css?v=2">
+    <link rel="stylesheet" href="../css/estilosContenido.css?v=9">
+    <link rel="stylesheet" href="../css/estilosPayu.css?v=5">
     
 </head>
 <body>
@@ -37,21 +38,21 @@
         <div class="pagos">
 
             <p>
-                Es necesario tener una cuenta de PayU para realizar los pagos, en el siguiente link podrá ingresar al sitio para iniciar sesión o crear una cuenta.
+              En el siguiente video mostramos nuestros valores institucionales.
             </p>
 
-            <div class="imagen-pago">
-                <a href="../vistas/payuVista.php"><img src="../imagenes/PayU.png" alt="" width="230px"></a>
-            </div>
+            <div class="marcovideo">
+              <video controls>
+                <source src="../videos/GiraBienes.mp4" type="video/mp4" width="200px">
+              </video>
+          </div>
 
         </div>
 
         <div class="reportes">
-            <p>
-                Haz clic en el siguiente enlace para conocer un reporte de tu estado de ventas.
-            </p>
+
             <div class="imagen-reportes">
-                <a href="../php/reporteventas.php"><img src="../imagenes/ventas.png" alt="" width="200px"></a>
+                <a href="../php/reporteventas.php"><img src="../imagenes/ventas2.png" alt=""></a>
                 </div>
             
         </div>

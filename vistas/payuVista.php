@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
     <title>Contenido</title>
-    <link rel="stylesheet" href="../css/estilosPayu.css?v=1">
+    <link rel="stylesheet" href="../css/estilosPayu.css?v=2">
     
 </head>
 <body>
@@ -25,16 +25,16 @@
 
             <div class="marcovideo">
                 <video controls>
-                    <source src="../videos/payu.mp4" type="video/mp4">
+                    <source src="../videos/GiraBienes.mp4" type="video/mp4">
                 </video>
             </div>
 
-            <div class="marcocrearcuenta">
+            <!-- <div class="marcocrearcuenta">
                 <p>
                     Para crear tu cuenta Gratuita y empezar a recibir pagos online ...
                 </p>
                 <a href="https://colombia.payu.com/"><img src="../imagenes/clic.png" alt=""></a>
-            </div>
+            </div> -->
             
         </div>
 

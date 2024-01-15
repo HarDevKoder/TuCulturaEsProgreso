@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
     <title>Contenido</title>
-    <link rel="stylesheet" href="../css/estilosContenido.css?v=9">
+    <link rel="stylesheet" href="../css/estilosContenido.css?v=17">
     <link rel="stylesheet" href="../css/estilosPayu.css?v=5">
     
 </head>
@@ -52,8 +52,8 @@
         <div class="reportes">
 
             <div class="imagen-reportes">
-                <a href="../php/reporteventas.php"><img src="../imagenes/ventas2.png" alt=""></a>
-                </div>
+              <a href="../php/reporteventas.php"><img src="../imagenes/ventas2.png" alt=""></a>
+            </div>
             
         </div>
 

@@ -1,4 +1,16 @@
 // ---------------------------------------------------------------------
+// Verificación de compatibilidad del navegador con service worker
+// ---------------------------------------------------------------------
+const verificarServiceWorker = () => {
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+      .register("./sw.js")
+      .then((reg) => console.log("Registro de SW exitoso", reg))
+      .catch((err) => console.warn("Error al tratar de registrar el sw", err));
+  }
+};
+
+// ---------------------------------------------------------------------
 // Efecto toggle para mostrar-ocultar el menu movil
 // ---------------------------------------------------------------------
 $(document).ready(main);
@@ -37,8 +49,8 @@ const mensaje = () => {
   );
 };
 
-var mensajeCompraDirecta = document.getElementById("linkCompraDirecta");
-mensajeCompraDirecta.addEventListener("click", mensaje);
+// var mensajeCompraDirecta = document.getElementById("linkCompraDirecta");
+// mensajeCompraDirecta.addEventListener("click", mensaje);
 
 // --------------------------------------------------------------------------
 // Overlay para mostrar codigos QR
@@ -60,3 +72,4 @@ function overlayShow() {
   }
 }
 
+verificarServiceWorker();

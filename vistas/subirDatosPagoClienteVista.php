@@ -9,6 +9,7 @@
     <title>Datos de Pago de Cliente</title>
     <link rel="stylesheet" href="../css/formularioSubirDatosPagoCliente.css?v=1">
     <!-- <?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?> -->
+    <link rel="shortcut icon" href="/imagenes/mejoradas/icon.png" type="image/x-icon">
 </head>
 <body>
 

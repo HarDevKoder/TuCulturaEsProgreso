@@ -6,7 +6,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
     <title>Contenido</title>
-    <link rel="stylesheet" href="../css/estilosPayu.css?v=2">
+    <link rel="stylesheet" href="../css/estilosPayu.css?v=3">
+    <link rel="shortcut icon" href="/imagenes/mejoradas/icon.png" type="image/x-icon">
     
 </head>
 <body>

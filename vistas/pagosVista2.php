@@ -18,9 +18,9 @@
         <form action=" " class="formulario" id="formulario" name="formulario" method="POST" >
             <h2 class="titulo">Zona de Pago</h2>
             <p>
-                <input type="radio"  name="tipoPago" value="registro" <?php if($tipoPago=="registro") echo "checked";?>>Pagar Registro<br />
-                <input type="radio"  name="tipoPago" value="referente" <?php if($tipoPago=="referente") echo "checked";?>>Liquidar Referente<br />
-                <input type="radio"  name="tipoPago" value="autor" <?php if($tipoPago=="autor") echo "checked";?>>Liquidar Autor<br />
+                <input type="radio"  name="tipoPago" value="registro" <?php if($tipoPago=="registro") echo "checked";?>>Comisión a quien invitó: <br />
+                <input type="radio"  name="tipoPago" value="referente" <?php if($tipoPago=="referente") echo "checked";?>>Comisión a Referente: <br />
+                <input type="radio"  name="tipoPago" value="autor" <?php if($tipoPago=="autor") echo "checked";?>>Comisión Autor: <br />
             </p>
 
             <div class="contenedorPagos">

@@ -1,5 +1,5 @@
 {
-  "name": "Tu_Cultura_Es_Progreso",
+  "name": "Tu Cultura es Progreso",
   "short_name": "TEP",
   "description": "Bienvenid@s a Tu Cultura es Progreso, lugar donde confluyen los valores humanos y el emprendimiento de la mano de la tecnología y los medios digitales.",
   "background_color": "#000000",
@@ -11,8 +11,8 @@
   "lang": "es-MX",
   "icons": [
     {
-      "src": "./imagenes/icon2.png",
-      "sizes": "512x512",
+      "src": "./imagenes/LogoTCPCircle.png",
+      "sizes": "360x360",
       "type": "image/png"
     }
   ]

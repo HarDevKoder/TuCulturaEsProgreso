@@ -11,7 +11,7 @@
   "lang": "es-MX",
   "icons": [
     {
-      "src": "./imagenes/LogoTCPCircle.png",
+      "src": "./imagenes/LogoTCP.png",
       "sizes": "360x360",
       "type": "image/png"
     }

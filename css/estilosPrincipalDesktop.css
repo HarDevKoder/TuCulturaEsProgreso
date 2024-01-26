@@ -211,10 +211,11 @@
     height: 150px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid rgb(2, 31, 68);
+     border: 2px solid silver;
     margin-bottom: 15px;
     display: grid;
     place-items: center;
+    background-color: aliceblue;
   }
 
   .contenido-pie .facebook img {
@@ -223,10 +224,11 @@
   }
 
   .contenido-pie p {
-    color: AliceBlue;
-    font-size: 1.2em;
+     color: rgb(41, 38, 38);
+    font-size: 1.8em;
     font-weight: 500;
     text-align: center;
+    text-decoration: none;
   }
 
   .contenido-pie .whatsapp {
@@ -242,21 +244,13 @@
   }
 
   .contenido-pie .whatsapp a {
-    color: aliceblue;
-    font-size: 1.3em;
+    color: rgb(41, 38, 38);
+    font-size: 1.8em;
     text-decoration: none;
     width: fit-content;
   }
 
-  .w3c {
-    width: 88px;
-    height: 31px;
-    display: inline-block;
-  }
 
-  .w3c img {
-    transform: scale(1.6);
-  }
   /* --------------------------------------------------------------------------------*/
   /* SECCION DEL CONTENIDO PAGINA CONTADOR ------------------------------------------*/
   /* --------------------------------------------------------------------------------*/

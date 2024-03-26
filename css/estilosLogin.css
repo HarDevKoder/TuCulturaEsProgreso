@@ -59,6 +59,7 @@ a:hover {
 .formulario .form-group {
   width: 100%;
   margin-bottom: 15px;
+  display: flex;
 }
 
 .formulario input[type="text"],
@@ -116,9 +117,10 @@ a:hover {
 }
 
 .formulario .submit-btn {
+  margin-left: 4px;
   padding: 12px;
   text-align: center;
-  width: 48px;
+  width: 50px;
   max-height: 48px;
   font-size: 18px;
   line-height: 18px;

@@ -68,6 +68,10 @@ body {
   align-items: center;
 }
 
+.logo img {
+  width: 85%;
+}
+
 /* Menu de navegacion */
 header nav {
   width: 100%;

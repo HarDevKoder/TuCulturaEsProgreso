@@ -1,62 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1,height=device-height, target-densitydpi=device-dpi">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
-    <title>Contenido</title>
-    <link rel="stylesheet" href="../css/estilosContenido.css?v=18">
-    <link rel="stylesheet" href="../css/estilosPayu.css?v=5">
-    <link rel="shortcut icon" href="imagenes/mejoradas/icon.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1,height=device-height, target-densitydpi=device-dpi">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>Contenido</title>
+  <link rel="stylesheet" href="../css/estilosContenido.css?v=38">
+  <link rel="shortcut icon" href="imagenes/LogoTCPCircle.png" type="image/png">
 </head>
+
 <body>
 
-    <div class="contenedor">
+  <div class="contenedor">
 
-        <div class="contenedorLinks">
+    <div class="contenedorLinks">
 
-            <div class="cerrarSesion">
-                <a href="../php/cerrar.php" class="linkCerrarSesion">Cerrar Sesión</a>
-            </div>
-                
+      <div class="cerrarSesion">
+        <a href="../php/cerrar.php" class="linkCerrarSesion">Cerrar Sesión</a>
+      </div>
 
-            <div class="descargaLibro">
-                <a href="../libro/Creatividad Motivacional_epub.epub" download="Creatividad Motivacional.epub"><img src="../imagenes/descargar-archivo.png" alt=""></a>
-            </div>
 
-        </div>
+      <div class="descargaLibro">
+        <a href="../libro/Creatividad Motivacional_epub.epub" download="Creatividad Motivacional.epub"><img src="../imagenes/descargar-archivo.png" alt=""></a>
+      </div>
 
-        <h2 class="titulo">Zona de Usuarios</h2>
-        <hr class="border">
+    </div>
 
-        <div class="notificaciones">
-            <span>Top de Ventas: <?php echo $maximoValorRegistrado ?></span>
-            <span>Ventas Totales: <?php echo $ventasTotales ?></span>
-        </div>       
+    <h2 class="titulo">Zona de Usuarios</h2>
+    <hr class="border">
 
-        <div class="pagos">
+    <div class="notificaciones">
+      <span>Top de Ventas: <?php echo $maximoValorRegistrado ?></span>
+      <span>Ventas Totales: <?php echo $ventasTotales ?></span>
+    </div>
 
-            <p>
-              En el siguiente video mostramos nuestros valores institucionales.
-            </p>
+    <div class="pagos">
 
-            <div class="marcovideo">
-              <video controls>
-                <source src="../videos/GiraBienes.mp4" type="video/mp4" width="200px">
-              </video>
-          </div>
+      <p>
+        En el siguiente video mostramos nuestros valores institucionales.
+      </p>
 
-        </div>
+      <div class="marcovideo">
+        <video controls>
+          <source src="../videos/GiraBienes.mp4" type="video/mp4" width="200px">
+        </video>
+      </div>
 
-        <div class="reportes">
+    </div>
 
-            <div class="imagen-reportes">
-              <a href="../php/reporteventas.php"><img src="../imagenes/ventas2.png" alt=""></a>
-            </div>
-            
-        </div>
+    <div class="imagen-reportes">
+      <a href="../php/reporteventas.php"><img src="../imagenes/ventas.png" alt=""></a>
+    </div>
 
-    </div>   
+  </div>
 </body>
+
 </html>

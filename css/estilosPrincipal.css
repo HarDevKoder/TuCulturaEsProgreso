@@ -267,6 +267,7 @@ header nav ul li a span {
   display: grid;
   place-items: center;
   background-color: aliceblue;
+  padding: 5px 0px 0px 5px;
 }
 
 .contenido-pie .facebook img {
@@ -299,67 +300,4 @@ header nav ul li a span {
   font-size: 1.8em;
   text-decoration: none;
   width: fit-content;
-}
-
-/* --------------------------------------------------------------------------------*/
-/* SECCION DEL CONTENIDO PAGINA CONTADOR ------------------------------------------*/
-/* --------------------------------------------------------------------------------*/
-
-.container-contador {
-  height: 100%;
-  display: grid;
-  gap: 1px;
-  grid: "cuenta" 140px "descarga" 100px;
-}
-
-.container-contador > * {
-  padding: 5px;
-  text-align: center;
-}
-/* -----------------------------------*/
-/* ------------- CUENTA ------------- */
-/* -----------------------------------*/
-
-.cuenta {
-  grid-area: cuenta;
-  background-image: url("/imagenes/contador.png");
-  background-size: 55%;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  padding: 10px;
-}
-
-.cuenta p {
-  font-size: 0.8em;
-  text-align: center;
-  font-weight: 500;
-  color: black;
-  margin-bottom: 50px;
-}
-
-.cuenta h2 {
-  color: MintCream;
-  font-weight: 600;
-  position: absolute;
-  top: 13px;
-  left: 175px;
-}
-/* --------------------------------------------- */
-/* ------ CAJA CONTENEDORA DESCARGAS ------------*/
-/* --------------------------------------------- */
-
-.descarga {
-  grid-area: descarga;
-  width: 100%;
-  max-width: 500px;
-  margin: 10px auto 10px auto;
-  background: Azure;
-  height: 200px;
-}
-
-.descarga img {
-  width: 60%;
-  display: block;
-  margin: auto auto;
 }

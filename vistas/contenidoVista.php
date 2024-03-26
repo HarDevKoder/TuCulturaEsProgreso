@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
   <title>Contenido</title>
   <link rel="stylesheet" href="../css/estilosContenido.css?v=38">
-  <link rel="shortcut icon" href="imagenes/LogoTCPCircle.png" type="image/png">
+  <link rel="shortcut icon" href="../imagenes/LogoTCPCircle.png" type="image/png">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
 
 
       <div class="descargaLibro">
-        <a href="../libro/Creatividad Motivacional_epub.epub" download="Creatividad Motivacional.epub"><img src="../imagenes/descargar-archivo.png" alt=""></a>
+        <a href="../libro/Creatividad Motivacional_epub.epub" download="Creatividad Motivacional.epub"><img src="../imagenes/descargar-archivo.png" loading="lazy" alt=""></a>
       </div>
 
     </div>
@@ -51,7 +51,7 @@
     </div>
 
     <div class="imagen-reportes">
-      <a href="../php/reporteventas.php"><img src="../imagenes/ventas.png" alt=""></a>
+      <a href="../php/reporteventas.php"><img src="../imagenes/ventas.png" loading="lazy" alt=""></a>
     </div>
 
   </div>

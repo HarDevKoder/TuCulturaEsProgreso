@@ -13,15 +13,6 @@
         //
         modificarDatos($conexion,'usuarios','linkRegistro',$linkVentas,'usuario',$cliente);
 
-
-
-
-
-
-
-
-
-
         
         // //obtengo el tamaño del archivo para verificar su existencia
         // $revisar = getimagesize($_FILES["imagenQr"]["tmp_name"]);

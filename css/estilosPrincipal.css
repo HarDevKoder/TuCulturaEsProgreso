@@ -175,7 +175,6 @@ header nav ul li a span {
 /* Sección Inicio  */
 .inicio {
   grid-area: inicio;
-  /* background: rgb(197, 216, 216); */
   background: rgb(196, 230, 230);
   padding-top: 20rem;
 }

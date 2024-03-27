@@ -59,8 +59,8 @@ const mensaje = () => {
 function overlayClose() {
   document.getElementById("overlay").style.display = "none";
   document
-    .querySelectorAll('input[name="tipoPago"]')
-    .forEach((x) => (x.checked = false));
+  .querySelectorAll('input[name="tipoPago"]')
+  .forEach((x) => (x.checked = false));
 }
 
 // Muestra el Overlay al presionr boton de pago con QR
@@ -71,9 +71,54 @@ function overlayShow() {
     document.getElementById("overlay").style.display = "block";
   }
 }
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker
-      .register("../sw.js")
-      .then((reg) => console.log("Registro de SW exitoso", reg))
-      .catch((err) => console.warn("Error al tratar de registrar el sw", err));
-  }
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+  .register("../sw.js")
+  .then((reg) => console.log("Registro de SW exitoso", reg))
+  .catch((err) => console.warn("Error al tratar de registrar el sw", err));
+}
+
+// --------------------------------------------------------------------------
+// CARRUSEL DE IMAGENES
+// --------------------------------------------------------------------------
+// ------------------------------------------------------------------------
+// Referencio elementos del DOM
+// ------------------------------------------------------------------------
+const btnLeft = document.querySelector(".btn-left");
+const btnRight = document.querySelector(".btn-right");
+const carruseles = document.querySelector(".carruseles");
+let posicion = 0;
+let transitionTime;
+
+// ------------------------------------------------------------------------
+// Efecto deslizante
+// ------------------------------------------------------------------------
+const transicion = (posicion, transitionTime) => {
+  carruseles.style.transform = `translate(-${posicion}%)`;
+  carruseles.style.transition = `all ease ${transitionTime}`;
+};
+
+// ------------------------------------------------------------------------
+// Desplazamiento al hacer clic en flecha derecha (>)
+// ------------------------------------------------------------------------
+const clicBotonDerecho = () => {
+  [posicion, transitionTime] =
+    posicion < 80 ? [(posicion += 20), "1s"] : [(posicion += -80), ".0s"];
+  transicion(posicion, transitionTime);
+};
+
+// ------------------------------------------------------------------------
+// Desplazamiento al hacer clic en flecha izquierda (<)
+// ------------------------------------------------------------------------
+const clicBotonIzquierdo = () => {
+  [posicion, transitionTime] =
+    posicion === 0 ? [(posicion -= -80), "0s"] : [(posicion -= 20), "1s"];
+  transicion(posicion, transitionTime);
+};
+
+// ------------------------------------------------------------------------
+// Programa principal
+// ------------------------------------------------------------------------
+btnLeft.addEventListener("click", clicBotonIzquierdo);
+btnRight.addEventListener("click", clicBotonDerecho);
+setInterval(clicBotonDerecho, 2500);

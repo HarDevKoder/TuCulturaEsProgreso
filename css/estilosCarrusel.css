@@ -1,0 +1,100 @@
+
+.container-carousel {
+  position: relative;
+  background-color:rgb(215, 250, 250);
+  border: none;
+  width: 31rem;
+  height: 23rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid silver;
+  margin-bottom: 10px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3), 3px 0px 3px rgba(0, 0, 0, 0.3);
+}
+
+.carruseles {
+  width: 500%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-section {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+
+.slider-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.libro{
+  padding-top: 18px;
+}
+
+.libro img{
+  display: block;
+  width:70%;
+  height: 90%;
+}
+
+.btn {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-1.2rem);
+  border: 2px solid silver;
+  color: silver;
+  font-weight: 100;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+.btn:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.btn-left {
+  left: 0.4rem; /* Ajustado a una posición relativa al contenedor */
+}
+
+.btn-right {
+  right: 0.4rem; /* Ajustado a una posición relativa al contenedor */
+}
+
+/* DESKTOP FIRST */
+
+/* Laptops */
+@media (max-width: 992px) {
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  .container-carousel {
+    width: 100%;
+  }
+  
+}
+
+/* Celulares Landscape */
+@media only screen and (orientation: landscape) {
+}

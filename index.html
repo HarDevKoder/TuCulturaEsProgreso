@@ -26,6 +26,8 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/estilosPrincipal.css?v=18">
   <link rel="stylesheet" href="css/estilosPrincipalDesktop.css?v=18">
+  <link rel="stylesheet" href="css/estilosCarrusel.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link rel="apple-touch-icon" href="./imagenes/LogoTCP.png">
   <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px)"
     href="./imagenes/LogoTCPCircle.png">
@@ -63,24 +65,55 @@
       <section class="container-contenido">
         <!-- Sección de Inicio -->
         <section class="inicio" id="uno">
-          <div class="imagenContenido">
-            <img src="/imagenes/Libro.png" loading="lazy" alt="imagen inicio">
+
+          <!-- Carrusel de productos (slideShow) -->
+          <div class="container-carousel">
+
+            <div class="carruseles">
+
+              <section class="slider-section libro">
+                <img src="/imagenes/Libro.png" loading="lazy" alt="Libro Girabienes" />
+              </section>
+
+              <section class="slider-section">
+                <img src="./imagenes/manillaHombre.png" alt="manillaHombre" />
+              </section>
+
+              <section class="slider-section">
+                <img src="./imagenes/proyectorImagenes.png" alt="proyectorImagenes" />
+              </section>
+
+              <section class="slider-section">
+                <img src="./imagenes/toallitasHumedas.png" alt="toallitasHumedas" />
+              </section>
+
+              <section class="slider-section">
+                <img src="./imagenes/zapatosDeportivos.png" alt="zapatosDeportivos" />
+              </section>
+
+            </div>
+              <div class="btn btn-left"><i class="bx bxs-chevron-left"></i></div>
+              <div class="btn btn-right"><i class="bx bxs-chevron-right"></i></div>
           </div>
+
           <div class="textoContenido">
-            <p>
-              En el fascinante mundo del pensamiento humano está la vida cotidiana, basada en las costumbres éticas y
-              morales que son pilares del desarrollo socioeconómico y cultural que marcan nuestro estilo de vida.
-            </p><br>
-            <p>
-              Alejado de los términos sofisticados que explican el pensamiento filosófico, en este libro hemos logrado
-              interpretar conceptos de la filosofía griega que llevan a que entendamos la Programación Neurolingüística
-              (PNL) y como influye esta disciplina de forma positiva en la manera de pensar y en nuestro proyecto de
-              vida, para que seamos futuros triunfadores.
-            </p><br>
-            <p>
-              No dejes pasar las oportunidades, esta lectura será fascinante y de gran provecho, Exitos!!
-            </p><br>
+              <p>
+                En el fascinante mundo del pensamiento humano está la vida cotidiana, basada en las costumbres éticas y
+                morales que son pilares del desarrollo socioeconómico y cultural que marcan nuestro estilo de vida.
+              </p><br>
+              <p>
+                Alejado de los términos sofisticados que explican el pensamiento filosófico, en este libro hemos logrado
+                interpretar conceptos de la filosofía griega que llevan a que entendamos la Programación
+                Neurolingüística
+                (PNL) y como influye esta disciplina de forma positiva en la manera de pensar y en nuestro proyecto de
+                vida, para que seamos futuros triunfadores.
+              </p><br>
+              <p>
+                No dejes pasar las oportunidades, esta lectura será fascinante y de gran provecho, Exitos!!
+              </p><br>
+
           </div>
+
         </section>
         <!-- Sección de Misión -->
         <section class="mision" id="dos">

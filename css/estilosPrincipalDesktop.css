@@ -16,7 +16,7 @@
   .header {
     width: 100%;
     left: 0;
-    height: 250px;
+    height: 180px;
     display: flex;
     justify-content: space-between;
   }
@@ -118,7 +118,7 @@
   .inicio {
     grid-area: inicio;
     background: rgb(196, 230, 230);
-    padding-top: 24rem;
+    padding-top: 20rem;
   }
 
   /* Sección Misión  */
